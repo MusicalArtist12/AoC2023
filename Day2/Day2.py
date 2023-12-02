@@ -8,15 +8,11 @@ file = open("input")
 sum = 0;
 for line in file:
     line = line.strip('\n')
-    
-    # print(line)
-
     linenum = re.match(r'(Game)( )([0-9]++)', line)
     if linenum == None:
         raise Exception("line number does not exist")
 
     num = int(re.sub("Game ", "", linenum.group()))
-            # print(num)
 
     reds = re.finditer(r'([0-9]++)( )(red)', line)
     redset: list[int] = [int(match.group(1)) for match in reds]
@@ -33,19 +29,22 @@ for line in file:
 
 # Part 1
 #    valid: bool = True;
+#    maxred = 12
+#    maxgreen = 13
+#    maxblue = 14
 #
 #    for red in redset:
-#        if red > 12:
+#        if red > maxred:
 #            valid = False
 #            break
 #    
 #    for green in greenset:
-#        if green > 13:
+#        if green > maxgreen:
 #            valid = False
 #            break
 #
 #    for blue in blueset:
-#        if blue > 14:
+#        if blue > maxblue:
 #            valid = False
 #            break
 #    
@@ -72,8 +71,7 @@ for line in file:
     setpow = highestred * highestgreen * highestblue
     sum += setpow
 
-    print(f"{num} has a power of {setpow}")
-
+    # print(f"{num} has a power of {setpow}")
 
 file.close()
 print(f"the sum is: {sum}")
