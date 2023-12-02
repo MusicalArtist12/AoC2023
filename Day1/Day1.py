@@ -1,3 +1,7 @@
+# Julia Abdel-Monem (juliaviolet.dev)
+# Advent of Code 2023
+# Day 1
+
 import re 
 
 def convertnum(x: str):
@@ -17,12 +21,13 @@ file = open("input")
 sum = 0;
 for line in file:
     line = line.strip('\n')
+    # remove the `one|two|three|four|five|six|seven|eight|nine|` to make this part-1 compatible
     matches = re.finditer(r'(?=(one|two|three|four|five|six|seven|eight|nine|[1-9]))', line)
     results: list[str] = [str(match.group(1)) for match in matches]
     final: list[int] = [convertnum(i) for i in results]
     num: int = final[0] * 10 + final[final.__len__()-1];
     sum += num
-    print(f"{num} = {final} {line}")
+    #print(f"{num} = {final} {line}")
 
 file.close()
 print(sum)
