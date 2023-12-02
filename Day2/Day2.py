@@ -27,32 +27,33 @@ for line in file:
     # print(greenset)
     # print(blueset)
 
-# Part 1
-#    valid: bool = True;
-#    maxred = 12
-#    maxgreen = 13
-#    maxblue = 14
+    # Part 1
+#   valid: bool = True
+#   MAX_RED = 12
+#   MAX_GREEN = 13
+#   MAX_BLUE = 14
 #
-#    for red in redset:
-#        if red > maxred:
-#            valid = False
-#            break
-#    
-#    for green in greenset:
-#        if green > maxgreen:
-#            valid = False
-#            break
+#   for red in redset:
+#       if red > MAX_RED:
+#           valid = False
+#           break
+#   
+#   for green in greenset:
+#       if green > MAX_GREEN:
+#           valid = False
+#           break
 #
-#    for blue in blueset:
-#        if blue > maxblue:
-#            valid = False
-#            break
-#    
-#    print(f"{num} is {valid}")
+#   for blue in blueset:
+#       if blue > MAX_BLUE:
+#           valid = False
+#           break
+#   
+#   print(f"{num} is {valid}")
 #
-#    if valid: 
-#        sum += num
+#   if valid: 
+#       sum += num
 
+    # Part 2
     highestred = 0
     for red in redset:
         if red > highestred:
