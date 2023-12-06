@@ -1,9 +1,0 @@
-each line contains two different numbers, 
-    a list of winning numbers
-    a list of numbers on the Card
-
-point value for 0 matches = 0
-point value for n matches = 2^(n-1)
-    - 1 match = 1
-    - 2 matches = 2
-    - 3 = 4
